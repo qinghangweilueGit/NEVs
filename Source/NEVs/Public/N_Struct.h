@@ -8,6 +8,19 @@
 #include "N_Struct.generated.h"
 
 UENUM(BlueprintType)
+enum class EMoudle: uint8
+{
+	cognition	UMETA(DisplayName="认知"),
+	PracticalTraining UMETA(DisplayName="实训"),
+	assessment	UMETA(DisplayName="考核")
+};
+UENUM(BlueprintType)
+enum class ECognitiveFunction: uint8
+{
+	Default	UMETA(DisplayName="默认"),
+	Perspective UMETA(DisplayName="透视")
+};
+UENUM(BlueprintType)
 enum class ESubtaskType: uint8
 {
 	Disassembly	UMETA(DisplayName="拆卸"),

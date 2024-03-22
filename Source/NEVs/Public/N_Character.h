@@ -31,6 +31,7 @@ public:
 	UStaticMeshComponent* LeftHand;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="StaticMesh")
 	UStaticMeshComponent* RightHand;
+
 public:
 	// Sets default values for this character's properties
 	AN_Character();
