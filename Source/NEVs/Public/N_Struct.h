@@ -8,6 +8,13 @@
 #include "N_Struct.generated.h"
 
 UENUM(BlueprintType)
+enum class ECompletedStatus: uint8
+{
+	Unfinished	UMETA(DisplayName="未完成"),
+	InProgress UMETA(DisplayName="进行中"),
+	Completed	UMETA(DisplayName="已完成")
+};
+UENUM(BlueprintType)
 enum class EMoudle: uint8
 {
 	cognition	UMETA(DisplayName="认知"),
@@ -26,7 +33,9 @@ enum class ESubtaskType: uint8
 	Disassembly	UMETA(DisplayName="拆卸"),
 	Installation UMETA(DisplayName="安装"),
 	Detection	UMETA(DisplayName="检测"),
-	Maintenance UMETA(DisplayName="维修")
+	Maintenance UMETA(DisplayName="维修"),
+	SelectionTool UMETA(DisplayName="选择工具"),
+	WearTools UMETA(DisplayName="穿戴工具")
 };
 //物品
 USTRUCT(BlueprintType)
@@ -60,7 +69,7 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	FString SubtaskName;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	bool Complete;
+	ECompletedStatus Complete;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	int32 Number;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
@@ -95,7 +104,7 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	int32 QuestMark;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	bool Complete;
+	ECompletedStatus Complete;
 	UPROPERTY(BlueprintReadWrite,EditAnywhere)
 	AActor* QuestActor;
 	UPROPERTY(BlueprintReadWrite,EditAnywhere)

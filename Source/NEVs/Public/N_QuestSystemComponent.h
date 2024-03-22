@@ -41,7 +41,6 @@ public:
 	UFUNCTION(BlueprintCallable,Category="QuestTips")
 	void StepTips(const bool& IsTips );
 
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

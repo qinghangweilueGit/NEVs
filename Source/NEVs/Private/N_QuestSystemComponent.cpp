@@ -71,6 +71,8 @@ void UN_QuestSystemComponent::StepTips(const bool& IsTips)
 }
 
 
+
+
 // Called when the game starts
 void UN_QuestSystemComponent::BeginPlay()
 {
